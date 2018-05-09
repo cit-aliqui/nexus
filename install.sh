@@ -17,10 +17,7 @@ CheckFirewall
 
 which java &>/dev/null
 if [ $? -ne 0 ]; then 
-	## Downloading Java
-	DownloadJava 8
-	## Installing Java
-	yum install /opt/jdk* -y &>/dev/null
+	yum install java -y &>/dev/null
 	if [ $? -eq 0 ]; then 
 		success "JAVA Installed Successfully"
 	else
